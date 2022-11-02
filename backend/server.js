@@ -1,8 +1,13 @@
 // CommonJS modules syntax
 const express = require('express')
+const colors = require('colors')
 const dotenv = require('dotenv').config()
 const port = process.env.PORT || 5000
 const { errorHandler } = require('./middleware/errorMiddleware')
+const connectDB = require('./config/db')
+
+// Connect DB
+connectDB()
 
 const app = express()
 
