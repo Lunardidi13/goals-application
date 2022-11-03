@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 
 const connectDB = async () => {
-    // .cyan.underline is colors library
     try {
         const conn = await mongoose.connect(process.env.MONGO_URI)
         console.log(`MongoDB Connected: ${conn.connection.host}`.cyan.underline);

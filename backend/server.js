@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: false }))
 
 // Define default routes
 app.use('/api/goals', require('./routes/goalRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
 
 // Middleware to overwrite default Express error handler
 app.use(errorHandler)
